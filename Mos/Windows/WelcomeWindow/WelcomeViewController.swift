@@ -46,6 +46,7 @@ class WelcomeViewController: NSViewController {
 
     // 检查是否有访问 accessibility 权限, 并设置对应按钮
     @objc func accessibilityPermissionsChecker(_ timer: Timer) {
+        
         if AXIsProcessTrusted() {
             // 如果有权限
             allowToAccessButton.title = i18n.done

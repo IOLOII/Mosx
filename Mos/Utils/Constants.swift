@@ -81,6 +81,9 @@ class OPTIONS_GENERAL_DEFAULT {
         willSet {newValue ? StatusItemManager.hideStatusItem() : StatusItemManager.showStatusItem()}
         didSet {Options.shared.saveOptions()}
     }
+//    var fixScroll = false {
+//        didSet {Options.shared.saveOptions()}
+//    }
     // 例外
     var allowlist = false {
         didSet {Options.shared.saveOptions()}
@@ -97,6 +100,9 @@ class OPTIONS_SCROLL_BASIC_DEFAULT: Codable {
         didSet {Options.shared.saveOptions()}
     }
     var reverse = true {
+        didSet {Options.shared.saveOptions()}
+    }
+    var fixScroll = true {
         didSet {Options.shared.saveOptions()}
     }
 }
@@ -116,6 +122,9 @@ class OPTIONS_SCROLL_ADVANCED_DEFAULT: Codable {
         didSet {Options.shared.saveOptions()}
     }
     var speed = 3.00 {
+        didSet {Options.shared.saveOptions()}
+    }
+    var tolerance = 3.00 {
         didSet {Options.shared.saveOptions()}
     }
     var duration = 3.90 {

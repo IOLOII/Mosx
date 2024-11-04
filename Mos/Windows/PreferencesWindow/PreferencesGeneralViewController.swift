@@ -13,6 +13,7 @@ class PreferencesGeneralViewController: NSViewController {
     // UI Elements
     @IBOutlet weak var scrollSmoothCheckBox: NSButton!
     @IBOutlet weak var scrollReverseCheckBox: NSButton!
+    @IBOutlet weak var fixScrollCheckBox: NSButton!
     @IBOutlet weak var launchOnLoginCheckBox: NSButton!
     @IBOutlet weak var hideStatusBarIconCheckBox: NSButton!
     
@@ -25,6 +26,16 @@ class PreferencesGeneralViewController: NSViewController {
     @IBAction func scrollSmoothClick(_ sender: NSButton) {
         Options.shared.scrollBasic.smooth = sender.state.rawValue==0 ? false : true
         syncViewWithOptions()
+    }
+    
+    @IBAction func fixScrollClick(_ sender:NSButton){
+        Options.shared.scrollBasic.fixScroll = sender.state.rawValue==0 ? false : true
+//        NSAlert(Options.shared.scrollBasic.fixScroll as! Error)
+        print("fixScroll")
+        print(Options.shared.scrollBasic.fixScroll)
+        syncViewWithOptions()
+        print(Options.shared.scrollBasic.fixScroll)
+        print(sender.state.rawValue)
     }
     
     // 翻转
@@ -60,5 +71,7 @@ extension PreferencesGeneralViewController {
         launchOnLoginCheckBox.state = NSControl.StateValue(rawValue: Options.shared.general.autoLaunch ? 1 : 0)
         // 隐藏
         hideStatusBarIconCheckBox.state = NSControl.StateValue(rawValue: Options.shared.general.hideStatusItem ? 1 : 0)
+        
+        fixScrollCheckBox.state = NSControl.StateValue(rawValue: Options.shared.scrollBasic.fixScroll ? 1 : 0)
     }
 }

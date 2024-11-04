@@ -21,11 +21,15 @@ class PreferencesAdvanceViewController: NSViewController {
     @IBOutlet weak var scrollStepStepper: NSStepper!
     @IBOutlet weak var scrollSpeedSlider: NSSlider!
     @IBOutlet weak var scrollSpeedInput: NSTextField!
+
     @IBOutlet weak var scrollSpeedStepper: NSStepper!
     @IBOutlet weak var scrollDurationSlider: NSSlider!
     @IBOutlet weak var scrollDurationInput: NSTextField!
     @IBOutlet weak var scrollDurationStepper: NSStepper!
     @IBOutlet weak var resetToDefaultsButton: NSButton!
+    
+    @IBOutlet weak var scrollToleranceInput: NSTextField!
+    @IBOutlet weak var scrollToleranceStepper: NSStepper!
     // Constants
     let PopUpButtonPadding = 2 // 减去第一个 Disabled 和分割线的距离
     let DefaultConfigForCompare = OPTIONS_SCROLL_ADVANCED_DEFAULT()
@@ -83,8 +87,16 @@ class PreferencesAdvanceViewController: NSViewController {
     @IBAction func scrollSpeedStepperChange(_ sender: NSStepper) {
         setScrollSpeed(value: sender.doubleValue)
     }
+    
+    @IBAction func scrollToleranceStepperChange(_ sender: NSStepper) {
+        setScrollTolerance(value: sender.doubleValue)
+    }
     func setScrollSpeed(value: Double) {
         getTargetApplicationScrollOptions().speed = value
+        syncViewWithOptions()
+    }
+    func setScrollTolerance(value: Double) {
+        getTargetApplicationScrollOptions().tolerance = value
         syncViewWithOptions()
     }
     

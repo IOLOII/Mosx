@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -361,12 +361,12 @@
         <scene sceneID="5zC-sP-JZj">
             <objects>
                 <viewController title="General" storyboardIdentifier="general" id="ITL-GD-CPd" customClass="PreferencesGeneralViewController" customModule="Mos" customModuleProvider="target" sceneMemberID="viewController">
-                    <visualEffectView key="view" blendingMode="behindWindow" material="toolTip" state="active" id="LZw-qp-NWH">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="241"/>
+                    <visualEffectView key="view" misplaced="YES" blendingMode="behindWindow" material="toolTip" state="active" id="LZw-qp-NWH">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="301"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" verifyAmbiguity="off" translatesAutoresizingMaskIntoConstraints="NO" id="pbD-Py-v9a">
-                                <rect key="frame" x="18" y="207" width="140" height="16"/>
+                                <rect key="frame" x="18" y="267" width="140" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="136" id="57o-MC-gu0"/>
                                 </constraints>
@@ -377,7 +377,7 @@
                                 </textFieldCell>
                             </textField>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="trO-q7-P9k">
-                                <rect key="frame" x="169" y="206" width="262" height="16"/>
+                                <rect key="frame" x="169" y="266" width="262" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="6be-Ze-RVr"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="cIz-FP-2vW"/>
@@ -391,7 +391,7 @@
                                 </connections>
                             </button>
                             <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qB6-TG-thS">
-                                <rect key="frame" x="169" y="185" width="264" height="14"/>
+                                <rect key="frame" x="169" y="245" width="264" height="14"/>
                                 <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" title="Let the mouse wheel scroll smoothly like butter" id="bbo-GH-WeC">
                                     <font key="font" metaFont="menu" size="11"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -399,7 +399,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="1C8-Zc-3rK">
-                                <rect key="frame" x="169" y="158" width="262" height="16"/>
+                                <rect key="frame" x="169" y="218" width="262" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="hlp-4s-ISF"/>
                                 </constraints>
@@ -412,9 +412,20 @@
                                 </connections>
                             </button>
                             <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0ZA-ya-bOd">
-                                <rect key="frame" x="169" y="137" width="264" height="14"/>
+                                <rect key="frame" x="169" y="197" width="264" height="14"/>
                                 <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" title="Reverse the mouse wheel scroll direction" id="CqK-3z-D0G">
                                     <font key="font" metaFont="menu" size="11"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jGL-jO-sFz">
+                                <rect key="frame" x="168" y="150" width="264" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="8Vk-hH-yVO"/>
+                                </constraints>
+                                <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" title="修正滚动" id="nkC-wn-Ddc">
+                                    <font key="font" size="11" name=".PingFangSC-Regular"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -494,6 +505,19 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Iul-Bl-b8c">
+                                <rect key="frame" x="168" y="170" width="81" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="6O9-mP-zW4"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Fix Scroll" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="clA-Dh-2gd">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="fixScrollClick:" target="ITL-GD-CPd" id="dsw-Z0-hEO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qB6-TG-thS" secondAttribute="trailing" constant="19" id="1Mr-RA-5mx"/>
@@ -503,6 +527,8 @@
                             <constraint firstItem="1OP-ac-77Z" firstAttribute="leading" secondItem="Xzk-6e-mKA" secondAttribute="leading" id="BLN-CR-xdb"/>
                             <constraint firstItem="sTG-Fn-P3P" firstAttribute="centerY" secondItem="1OP-ac-77Z" secondAttribute="centerY" id="CbM-Dv-tbc"/>
                             <constraint firstItem="sTG-Fn-P3P" firstAttribute="leading" secondItem="1OP-ac-77Z" secondAttribute="trailing" constant="4" id="ECw-uh-DpE"/>
+                            <constraint firstItem="Iul-Bl-b8c" firstAttribute="leading" secondItem="LZw-qp-NWH" secondAttribute="leading" constant="170" id="I30-Nm-qXc"/>
+                            <constraint firstItem="jGL-jO-sFz" firstAttribute="top" secondItem="Iul-Bl-b8c" secondAttribute="bottom" constant="8" id="MeQ-A1-yAX"/>
                             <constraint firstItem="qB6-TG-thS" firstAttribute="top" secondItem="trO-q7-P9k" secondAttribute="bottom" constant="8" id="OWN-ug-gbY"/>
                             <constraint firstAttribute="bottom" secondItem="Gt2-mv-Ris" secondAttribute="bottom" constant="20" id="PEZ-EE-k79"/>
                             <constraint firstItem="qB6-TG-thS" firstAttribute="leading" secondItem="trO-q7-P9k" secondAttribute="leading" id="PYB-cR-DVb"/>
@@ -517,7 +543,9 @@
                             <constraint firstAttribute="trailing" secondItem="hwe-nN-pyY" secondAttribute="trailing" constant="20" id="Xsx-ru-gzp"/>
                             <constraint firstItem="Gt2-mv-Ris" firstAttribute="leading" secondItem="Xzk-6e-mKA" secondAttribute="leading" id="Yvi-cN-EWJ"/>
                             <constraint firstItem="1OP-ac-77Z" firstAttribute="top" secondItem="zWh-16-369" secondAttribute="bottom" constant="12" id="bFN-sb-OCd"/>
-                            <constraint firstItem="hwe-nN-pyY" firstAttribute="top" secondItem="0ZA-ya-bOd" secondAttribute="bottom" constant="15" id="dxX-V8-JCJ"/>
+                            <constraint firstItem="Iul-Bl-b8c" firstAttribute="top" secondItem="0ZA-ya-bOd" secondAttribute="bottom" constant="12" id="bnO-DM-2w8"/>
+                            <constraint firstItem="hwe-nN-pyY" firstAttribute="top" secondItem="jGL-jO-sFz" secondAttribute="bottom" constant="28" id="dxX-V8-JCJ"/>
+                            <constraint firstItem="jGL-jO-sFz" firstAttribute="trailing" secondItem="hwe-nN-pyY" secondAttribute="trailing" id="fE5-ww-WK3"/>
                             <constraint firstItem="1C8-Zc-3rK" firstAttribute="top" secondItem="qB6-TG-thS" secondAttribute="bottom" constant="12" id="fxV-50-rHq"/>
                             <constraint firstAttribute="trailing" secondItem="1C8-Zc-3rK" secondAttribute="trailing" constant="19" id="g0p-Rv-8g5"/>
                             <constraint firstAttribute="trailing" secondItem="0ZA-ya-bOd" secondAttribute="trailing" constant="19" id="gaa-rW-GPM"/>
@@ -533,6 +561,7 @@
                         </constraints>
                     </visualEffectView>
                     <connections>
+                        <outlet property="fixScrollCheckBox" destination="Iul-Bl-b8c" id="4U4-at-W8U"/>
                         <outlet property="hideStatusBarIconCheckBox" destination="1OP-ac-77Z" id="eAY-em-HEE"/>
                         <outlet property="launchOnLoginCheckBox" destination="Xzk-6e-mKA" id="Dx6-Zs-rVj"/>
                         <outlet property="scrollReverseCheckBox" destination="1C8-Zc-3rK" id="42v-MN-ifk"/>
@@ -541,7 +570,7 @@
                 </viewController>
                 <customObject id="KsC-af-ap0" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="451" y="1236.5"/>
+            <point key="canvasLocation" x="451" y="1266"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="Hhx-OZ-y0V">
@@ -670,7 +699,7 @@
                                 </textFieldCell>
                             </textField>
                             <button wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tRq-hb-iBK">
-                                <rect key="frame" x="201" y="23" width="199" height="50"/>
+                                <rect key="frame" x="200" y="22" width="201" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="bGw-tw-b6e"/>
                                     <constraint firstAttribute="height" constant="45" id="sn6-ZS-RPN"/>
@@ -692,7 +721,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2UK-rI-Gkw">
-                                <rect key="frame" x="398" y="132" width="154" height="48"/>
+                                <rect key="frame" x="397" y="131" width="156" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="QfH-WZ-dur"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cT7-2u-t3v"/>
@@ -1107,7 +1136,7 @@
                                 <rect key="frame" x="0.0" y="28" width="450" height="5"/>
                             </box>
                             <button imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnb-pe-ZN5">
-                                <rect key="frame" x="323" y="7" width="100" height="16"/>
+                                <rect key="frame" x="322" y="7" width="101" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" id="NS2-ZW-iDh"/>
                                 </constraints>
@@ -1173,6 +1202,7 @@
                         </constraints>
                     </visualEffectView>
                     <connections>
+                        <outlet property="allowlistModeCheckBox" destination="gnb-pe-ZN5" id="HTP-3G-Zme"/>
                         <outlet property="applicationSourceMenuControl" destination="v6G-mQ-Ddk" id="dfx-xG-DcT"/>
                         <outlet property="manuallyInputMenuItem" destination="Vp7-0n-aRd" id="WQe-VY-jhx"/>
                         <outlet property="manuallySelectFromFinderMenuItem" destination="dhF-95-kUJ" id="Ny0-LT-dUM"/>
@@ -1180,7 +1210,6 @@
                         <outlet property="runningAndInstalledManuItem" destination="R0d-21-g6W" id="a14-sX-cP3"/>
                         <outlet property="runningAndInstalledMenuChildrenContainer" destination="tXQ-GJ-k5M" id="kvh-JP-b9D"/>
                         <outlet property="tableView" destination="LmV-gi-3fE" id="GOb-17-dvX"/>
-                        <outlet property="allowlistModeCheckBox" destination="gnb-pe-ZN5" id="HTP-3G-Zme"/>
                     </connections>
                 </viewController>
                 <menu id="v6G-mQ-Ddk">
@@ -1615,7 +1644,7 @@ Gw
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TU2-J4-KYA">
+                            <slider wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TU2-J4-KYA">
                                 <rect key="frame" x="169" y="191" width="171" height="19"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="oWf-Q1-9W7"/>
@@ -1670,7 +1699,7 @@ Gw
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YRx-cZ-Ol5">
+                            <slider wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YRx-cZ-Ol5">
                                 <rect key="frame" x="169" y="134" width="171" height="20"/>
                                 <sliderCell key="cell" controlSize="small" state="on" alignment="left" minValue="1" maxValue="10" doubleValue="3" tickMarkPosition="above" numberOfTickMarks="5" sliderType="linear" id="ovU-ME-3wf"/>
                                 <connections>
@@ -1722,7 +1751,7 @@ Gw
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ILS-hD-J9N" userLabel="Scroll Duration Slider">
+                            <slider wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ILS-hD-J9N" userLabel="Scroll Duration Slider">
                                 <rect key="frame" x="169" y="77" width="171" height="20"/>
                                 <sliderCell key="cell" controlSize="small" state="on" alignment="left" minValue="1" maxValue="5" doubleValue="4" tickMarkPosition="above" numberOfTickMarks="5" sliderType="linear" id="7tf-65-J41"/>
                                 <connections>
@@ -2174,7 +2203,7 @@ Gw
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CL7-Pu-ouN">
-                                <rect key="frame" x="18" y="272" width="434" height="35"/>
+                                <rect key="frame" x="18" y="274" width="434" height="35"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Contributors" id="ZJY-Yg-Qev">
                                     <font key="font" metaFont="systemUltraLight" size="30"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2182,7 +2211,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wbo-Wg-RyO">
-                                <rect key="frame" x="18" y="233" width="434" height="19"/>
+                                <rect key="frame" x="18" y="235" width="434" height="19"/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Translation" id="Lhz-x5-X0I">
                                     <font key="font" metaFont="systemUltraLight" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2190,7 +2219,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8ZB-BU-sKn">
-                                <rect key="frame" x="18" y="207" width="95" height="11"/>
+                                <rect key="frame" x="18" y="209" width="95" height="11"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="English" id="wrT-sk-Qjf">
                                     <font key="font" metaFont="miniSystemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2198,7 +2227,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K8n-u9-1XP">
-                                <rect key="frame" x="119" y="205" width="333" height="13"/>
+                                <rect key="frame" x="119" y="207" width="333" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="Joshua Park(@godly-devotion), OrcaXS(@OrcaXS) ..." id="SuH-MV-uUc">
                                     <font key="font" metaFont="systemUltraLight" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2206,7 +2235,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nmu-9V-mMs">
-                                <rect key="frame" x="18" y="186" width="95" height="11"/>
+                                <rect key="frame" x="18" y="188" width="95" height="11"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Simplified Chinese" id="ZMc-lN-S4q">
                                     <font key="font" metaFont="miniSystemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2214,7 +2243,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e40-ep-Ivj">
-                                <rect key="frame" x="119" y="184" width="333" height="13"/>
+                                <rect key="frame" x="119" y="186" width="333" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="Wang Yudong(@wyudong)" id="I6G-zh-cEt">
                                     <font key="font" metaFont="systemUltraLight" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2222,7 +2251,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rXK-39-g8g">
-                                <rect key="frame" x="18" y="165" width="95" height="11"/>
+                                <rect key="frame" x="18" y="167" width="95" height="11"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Traditional Chinese" id="jzQ-oc-Ugr">
                                     <font key="font" metaFont="miniSystemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2230,7 +2259,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OhB-iv-ZYO">
-                                <rect key="frame" x="18" y="144" width="95" height="11"/>
+                                <rect key="frame" x="18" y="146" width="95" height="11"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Russian" id="Gct-aO-hq1">
                                     <font key="font" metaFont="miniSystemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2238,7 +2267,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dKF-OI-Qn5">
-                                <rect key="frame" x="119" y="163" width="333" height="13"/>
+                                <rect key="frame" x="119" y="165" width="333" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title=" jrthsr700tmax(@jrthsr700tmax), Crizant(@crizant)" id="Imc-rJ-YnM">
                                     <font key="font" metaFont="systemUltraLight" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2246,7 +2275,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Oa-q8-f7F">
-                                <rect key="frame" x="119" y="142" width="333" height="13"/>
+                                <rect key="frame" x="119" y="144" width="333" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="Andrew Mclaren(@mclvren)" id="2v8-3K-NkQ">
                                     <font key="font" metaFont="systemUltraLight" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2254,7 +2283,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NBx-14-PHq">
-                                <rect key="frame" x="18" y="123" width="95" height="11"/>
+                                <rect key="frame" x="18" y="125" width="95" height="11"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Korean" id="5Yv-xg-jrn">
                                     <font key="font" metaFont="miniSystemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2262,7 +2291,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OYG-R5-ewd">
-                                <rect key="frame" x="119" y="121" width="333" height="13"/>
+                                <rect key="frame" x="119" y="123" width="333" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="Woosuk Park(@readingsnail)" id="Tje-UR-0oP">
                                     <font key="font" metaFont="systemUltraLight" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2270,7 +2299,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YRG-Je-euE">
-                                <rect key="frame" x="18" y="102" width="95" height="11"/>
+                                <rect key="frame" x="18" y="104" width="95" height="11"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Turkish" id="Car-A5-sHp">
                                     <font key="font" metaFont="miniSystemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2278,7 +2307,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EON-hr-qD7">
-                                <rect key="frame" x="119" y="100" width="333" height="13"/>
+                                <rect key="frame" x="119" y="102" width="333" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="Seçkin Kükrer(@LeaveNhA)" id="n8O-2V-Zob">
                                     <font key="font" metaFont="systemUltraLight" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2286,7 +2315,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mGO-En-tOR">
-                                <rect key="frame" x="18" y="81" width="95" height="11"/>
+                                <rect key="frame" x="18" y="83" width="95" height="11"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="German" id="gz6-ih-1iJ">
                                     <font key="font" metaFont="miniSystemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2294,7 +2323,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Hw-4g-qhX">
-                                <rect key="frame" x="119" y="79" width="333" height="13"/>
+                                <rect key="frame" x="119" y="81" width="333" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="Selim(@lima0)" id="NGY-5D-ZYm">
                                     <font key="font" metaFont="systemUltraLight" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2302,7 +2331,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FB0-Zk-k1Y">
-                                <rect key="frame" x="18" y="60" width="95" height="11"/>
+                                <rect key="frame" x="18" y="62" width="95" height="11"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Other" id="SUM-eh-Lms">
                                     <font key="font" metaFont="miniSystemBold"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2310,7 +2339,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uh2-b5-ZUZ">
-                                <rect key="frame" x="119" y="58" width="333" height="13"/>
+                                <rect key="frame" x="119" y="60" width="333" height="13"/>
                                 <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" title="Waiting for you" id="xnQ-YR-qNR">
                                     <font key="font" metaFont="systemUltraLight" size="10"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -2318,7 +2347,7 @@ Gw
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RuK-DK-wea">
-                                <rect key="frame" x="133" y="17" width="204" height="23"/>
+                                <rect key="frame" x="132" y="16" width="206" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="9xz-Yt-Nvx"/>
                                 </constraints>
@@ -2411,7 +2440,7 @@ Gw
                                 <rect key="frame" x="0.0" y="615" width="629" height="5"/>
                             </box>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ky1-pk-TF3">
-                                <rect key="frame" x="38" y="635" width="553" height="37"/>
+                                <rect key="frame" x="37" y="634" width="555" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="WOc-ub-6eO"/>
                                 </constraints>
@@ -2543,7 +2572,7 @@ Gw
                                         </constraints>
                                     </customView>
                                     <textField wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bb8-Rh-HpB" userLabel="Rendering the data of this window is extremely bad for scroll performance, keep close if not necessary.">
-                                        <rect key="frame" x="27" y="20" width="434" height="13"/>
+                                        <rect key="frame" x="27" y="20" width="433" height="13"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Rendering this chart will affect scrolling performance. Close the window when not in use." id="TUE-3v-CaJ">
                                             <font key="font" metaFont="system" size="10"/>
                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>

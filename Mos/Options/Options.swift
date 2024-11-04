@@ -76,9 +76,13 @@ extension Options {
             // UserDefaults.standard.set(options.autoLaunch, forKey:"autoLaunch") // 直接从系统值初始化
             UserDefaults.standard.set(general.hideStatusItem, forKey:"hideStatusItem")
             UserDefaults.standard.set(general.allowlist, forKey:"allowlist")
+            UserDefaults.standard.set(scrollBasic.fixScroll, forKey: "fixScroll")
+//            let fixScroll = UserDefaults.standard.data(forKey: "fixScroll")
+//            print("fixScroll userDefaults data",fixScroll)
             UserDefaults.standard.set(general.applications.json(), forKey:"applications")
             // 滚动:基础
             UserDefaults.standard.set(scrollBasic.smooth, forKey:"smooth")
+            print("fixScroll userDefaults data",scrollBasic.smooth)
             UserDefaults.standard.set(scrollBasic.reverse, forKey:"reverse")
             // 滚动:高级
             UserDefaults.standard.set(scrollAdvanced.dash, forKey:"dash")

@@ -140,16 +140,37 @@ extension ScrollEvent {
     
     // 归一化数据
     class func normalize(axis: axisType) -> (ScrollEvent, Double) -> () {
+        // NSLog("axis %i", axis)
+        print(axis,"运行方向")
         if axis == axisType.Y {
             return {
                 (scrollEvent: ScrollEvent, threshold: Double) in
                     let usableValue = scrollEvent.Y.usableValue
+                    print(threshold)
+                    print(usableValue)
+                let usableValue2 = -10.0
+                if Options.shared.scrollBasic.fixScroll == true {
+                    if (usableValue > usableValue2) {
+                        NSLog("usableValue is -1.0")
+                        return
+                    }
+                }
+
                     scrollEvent.Y.usableValue = usableValue>0.0 ? max(usableValue.magnitude, threshold) : -max(usableValue.magnitude, threshold)
             }
         } else {
             return {
                 (scrollEvent: ScrollEvent, threshold: Double) in
                     let usableValue = scrollEvent.X.usableValue
+                    print(threshold)
+                    print(usableValue)
+                let usableValue2 = 10.0
+                if Options.shared.scrollBasic.fixScroll == true {
+                    if (usableValue < usableValue2) {
+                        NSLog("usableValue is 1.0")
+                        return
+                    }
+                }
                     scrollEvent.X.usableValue = usableValue>0.0 ? max(usableValue.magnitude, threshold) : -max(usableValue.magnitude, threshold)
             }
         }

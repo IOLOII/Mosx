@@ -65,6 +65,12 @@ class ScrollCore {
         var step = Options.shared.scrollAdvanced.step,
             speed = Options.shared.scrollAdvanced.speed,
             duration = Options.shared.scrollAdvanced.durationTransition
+        NSLog("速度 %.2f", speed)
+//        print(speed)
+        NSLog("step %i", step)
+        NSLog("时间 %.2f", duration)
+        
+        
         if let exceptionalApplication = ScrollCore.shared.exceptionalApplication {
             enableSmooth = exceptionalApplication.isSmooth(ScrollCore.shared.blockSmooth)
             enableReverse = exceptionalApplication.isReverse()
